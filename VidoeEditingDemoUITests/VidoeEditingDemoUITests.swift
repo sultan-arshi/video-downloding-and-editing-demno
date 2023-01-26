@@ -2,7 +2,7 @@
 //  VidoeEditingDemoUITests.swift
 //  VidoeEditingDemoUITests
 //
-//  Created by Rashdan Natiq on 25/01/2023.
+//  Created by Sultan Ali on 25/01/2023.
 //
 
 import XCTest
