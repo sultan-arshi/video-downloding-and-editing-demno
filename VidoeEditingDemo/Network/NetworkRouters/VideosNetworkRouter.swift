@@ -9,7 +9,7 @@ import Foundation
 struct ProductionServer {
 	static var host = "prod.drivefocus-api.com/api/v1"
 	// for testing only
-	static let accessToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZjY0ZTg2Yy1lNmY5LTRiN2MtOTRhNC0yMGFiMzJlMGU3NzUiLCJpYXQiOjE2NzQ3NDQzMjIsImV4cCI6MTY3NDc0NzkyMiwidHlwIjoiYWNjZXNzIiwicm9sIjoiVVNFUiJ9.Oy9bcXhsCe2pr953wmgI6zctq3DXbHfUB399dnf4pr-xUMvRFRy55rEaMskC35BS9F0hYivyP2xJyAzUkGJbIQ"
+	static let accessToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZjY0ZTg2Yy1lNmY5LTRiN2MtOTRhNC0yMGFiMzJlMGU3NzUiLCJpYXQiOjE2NzQ3NTkzNTksImV4cCI6MTY3NDc2Mjk1OSwidHlwIjoiYWNjZXNzIiwicm9sIjoiVVNFUiJ9._g4b0MEi5yUkrNGmhqWJIsl5gf578md_1zhYel6gZwzmoFc8BQ82zjN6ITteRbIXRbSMmt7KF2BlOfSByJ_ETg"
 }
 
 public protocol URLRequestConvertible {

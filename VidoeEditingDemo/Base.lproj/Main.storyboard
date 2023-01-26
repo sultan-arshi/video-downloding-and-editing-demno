@@ -16,27 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7A-EN-lxB">
+                                <rect key="frame" x="10" y="69" width="373" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X6F-up-hMv">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="144.33333333333331" width="393" height="673.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9S-F1-mpo">
+                                <rect key="frame" x="146.66666666666666" y="99.333333333333329" width="100" height="34.999999999999986"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download"/>
+                                <connections>
+                                    <action selector="didTapDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHG-yJ-2Co"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="X6F-up-hMv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3PY-Y2-TvF"/>
+                            <constraint firstItem="R9S-F1-mpo" firstAttribute="top" secondItem="W7A-EN-lxB" secondAttribute="bottom" constant="10" id="AOP-qC-B2d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X6F-up-hMv" secondAttribute="trailing" id="HhI-86-54r"/>
+                            <constraint firstItem="R9S-F1-mpo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M0N-Tu-xQT"/>
+                            <constraint firstItem="X6F-up-hMv" firstAttribute="top" secondItem="R9S-F1-mpo" secondAttribute="bottom" constant="10" id="RB2-gy-SUY"/>
+                            <constraint firstItem="W7A-EN-lxB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Sw6-Qe-FBP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W7A-EN-lxB" secondAttribute="trailing" constant="10" id="aCl-PE-n1l"/>
+                            <constraint firstItem="W7A-EN-lxB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cad-g7-Zlf"/>
                             <constraint firstItem="X6F-up-hMv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dxU-rI-1JZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X6F-up-hMv" secondAttribute="bottom" id="lcZ-me-QhJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="downloadButton" destination="R9S-F1-mpo" id="RCS-Z1-nGV"/>
                         <outlet property="tableView" destination="X6F-up-hMv" id="lnX-ps-MmV"/>
+                        <outlet property="titleLabel" destination="W7A-EN-lxB" id="Ev5-q3-YtM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="-23"/>
+            <point key="canvasLocation" x="90.839694656488547" y="-23.239436619718312"/>
         </scene>
     </scenes>
     <resources>

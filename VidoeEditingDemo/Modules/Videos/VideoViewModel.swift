@@ -6,28 +6,44 @@
 //
 
 import Foundation
+import UIKit
 
 protocol VideoViewModel {
 	var isLoading: Binder<Bool> { get }
-	var reloadTableView: Binder<DriveVideo>? { get }
+	var reloadTableView: Binder<DriveVideo?>? { get }
+	
+	func numberOfRow() -> Int
+	func viewModelForRow(at indexPath: IndexPath) -> VideoItemCellViewModel
+	func downloadVidoe()
 }
 
 
 class VideoViewModelImp: VideoViewModel {
-	
-	
+
 	// MARK: - VideoViewModel
 	var isLoading: Binder<Bool> = Binder(false)
-	var reloadTableView: Binder<DriveVideo>? = nil
+	var reloadTableView: Binder<DriveVideo?>? = Binder(nil)
+	
+	func numberOfRow() -> Int {
+		self.itemViewModels.count
+	}
+	
+	func viewModelForRow(at indexPath: IndexPath) -> VideoItemCellViewModel {
+		return self.itemViewModels[indexPath.row]
+	}
+	
+	func downloadVidoe() {
+		if let video = self.driveVidoe {
+			self.downloadVideo(driveVideo: video)
+		}
+	}
 	
 	// MARK: - private
 	private var videoSerives: VideoServicing
 	private var driveVidoe: DriveVideo?
 	private var itemViewModels: [VideoItemCellViewModel] = [] {
 		didSet {
-			if let driveVidoe = self.driveVidoe {
-				reloadTableView?.set(to: driveVidoe)
-			}
+			reloadTableView!.set(to: driveVidoe)
 		}
 	}
 	
