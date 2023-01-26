@@ -27,6 +27,14 @@
 		A968908B29813DD400382B72 /* VidoeEditingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968908A29813DD400382B72 /* VidoeEditingDemoUITests.swift */; };
 		A968908D29813DD400382B72 /* VidoeEditingDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968908C29813DD400382B72 /* VidoeEditingDemoUITestsLaunchTests.swift */; };
 		A98380972982C6E6004272F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380962982C6E6004272F1 /* ViewController.swift */; };
+		A98380992982D740004272F1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380982982D740004272F1 /* BaseViewController.swift */; };
+		A983809D2982D847004272F1 /* LayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983809B2982D847004272F1 /* LayoutAttributes.swift */; };
+		A983809E2982D848004272F1 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983809C2982D847004272F1 /* Layouts.swift */; };
+		A98380A12982E0D4004272F1 /* VideoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983809F2982E0D4004272F1 /* VideoItemCell.swift */; };
+		A98380A22982E0D4004272F1 /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98380A02982E0D4004272F1 /* VideoItemCell.xib */; };
+		A98380A52982F19F004272F1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380A42982F19F004272F1 /* UIView.swift */; };
+		A98380A72982F23A004272F1 /* DequeueInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380A62982F23A004272F1 /* DequeueInitializable.swift */; };
+		A98380A92982FCCA004272F1 /* VideoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380A82982FCCA004272F1 /* VideoCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +80,14 @@
 		A968908C29813DD400382B72 /* VidoeEditingDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidoeEditingDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A968909B29816A4800382B72 /* sampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampleVideo.mp4; sourceTree = "<group>"; };
 		A98380962982C6E6004272F1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = VidoeEditingDemo/Modules/Videos/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		A98380982982D740004272F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A983809B2982D847004272F1 /* LayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAttributes.swift; sourceTree = "<group>"; };
+		A983809C2982D847004272F1 /* Layouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
+		A983809F2982E0D4004272F1 /* VideoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItemCell.swift; sourceTree = "<group>"; };
+		A98380A02982E0D4004272F1 /* VideoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
+		A98380A42982F19F004272F1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		A98380A62982F23A004272F1 /* DequeueInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueInitializable.swift; sourceTree = "<group>"; };
+		A98380A82982FCCA004272F1 /* VideoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A916989429817CBF00660A36 /* DriveVideo.swift */,
+				A98380A82982FCCA004272F1 /* VideoCellViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				A916989F2982BBD100660A36 /* Binder.swift */,
+				A98380982982D740004272F1 /* BaseViewController.swift */,
+				A98380A62982F23A004272F1 /* DequeueInitializable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -173,6 +192,8 @@
 		A91698A12982C0F400660A36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A983809F2982E0D4004272F1 /* VideoItemCell.swift */,
+				A98380A02982E0D4004272F1 /* VideoItemCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +221,8 @@
 		A968906529813DCF00382B72 /* VidoeEditingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A98380A32982F186004272F1 /* Extensions */,
+				A983809A2982D847004272F1 /* Layout */,
 				A916989E2982BBBE00660A36 /* Utilities */,
 				A916989A29827CCD00660A36 /* Modules */,
 				A916989329817C8B00660A36 /* Model */,
@@ -248,6 +271,23 @@
 				A968906829813DCF00382B72 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		A983809A2982D847004272F1 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				A983809B2982D847004272F1 /* LayoutAttributes.swift */,
+				A983809C2982D847004272F1 /* Layouts.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		A98380A32982F186004272F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A98380A42982F19F004272F1 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98380A22982E0D4004272F1 /* VideoItemCell.xib in Resources */,
 				A968907629813DD400382B72 /* LaunchScreen.storyboard in Resources */,
 				A968907329813DD400382B72 /* Assets.xcassets in Resources */,
 				A968906E29813DCF00382B72 /* Main.storyboard in Resources */,
@@ -384,12 +425,19 @@
 				A916988A2981707700660A36 /* ServiceError.swift in Sources */,
 				A91698A02982BBD100660A36 /* Binder.swift in Sources */,
 				A916989829826D4200660A36 /* Reachability.swift in Sources */,
+				A98380A92982FCCA004272F1 /* VideoCellViewModel.swift in Sources */,
 				A916988B2981707700660A36 /* VideoServicing.swift in Sources */,
 				A98380972982C6E6004272F1 /* ViewController.swift in Sources */,
+				A98380992982D740004272F1 /* BaseViewController.swift in Sources */,
+				A98380A12982E0D4004272F1 /* VideoItemCell.swift in Sources */,
+				A983809E2982D848004272F1 /* Layouts.swift in Sources */,
+				A98380A72982F23A004272F1 /* DequeueInitializable.swift in Sources */,
+				A983809D2982D847004272F1 /* LayoutAttributes.swift in Sources */,
 				A916988E2981792000660A36 /* APIClient.swift in Sources */,
 				A9169890298179C600660A36 /* VideosNetworkRouter.swift in Sources */,
 				A968907129813DCF00382B72 /* VidoeEditingDemo.xcdatamodeld in Sources */,
 				A916989D29827CFA00660A36 /* VideoViewModel.swift in Sources */,
+				A98380A52982F19F004272F1 /* UIView.swift in Sources */,
 				A91698892981707700660A36 /* VideoServices.swift in Sources */,
 				A916989529817CBF00660A36 /* DriveVideo.swift in Sources */,
 				A916989229817ADF00660A36 /* ViedeoServiceRequest.swift in Sources */,

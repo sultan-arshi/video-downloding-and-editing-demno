@@ -2,7 +2,7 @@
 //  Binder.swift
 //  VidoeEditingDemo
 //
-//  Created by Rashdan Natiq on 26/01/2023.
+//  Created by Sultan Ali on 26/01/2023.
 //
 
 import Foundation
