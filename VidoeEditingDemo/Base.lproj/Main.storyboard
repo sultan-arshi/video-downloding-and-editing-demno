@@ -17,20 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7A-EN-lxB">
-                                <rect key="frame" x="10" y="69" width="373" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="10" y="69" width="373" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X6F-up-hMv">
-                                <rect key="frame" x="0.0" y="144.33333333333331" width="393" height="673.66666666666674"/>
+                                <rect key="frame" x="0.0" y="155.66666666666669" width="393" height="662.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9S-F1-mpo">
-                                <rect key="frame" x="146.66666666666666" y="99.333333333333329" width="100" height="34.999999999999986"/>
+                                <rect key="frame" x="116.66666666666669" y="107.66666666666667" width="160" height="38.000000000000014"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="loe-g2-IXl"/>
+                                    <constraint firstAttribute="height" constant="38" id="yea-W0-Drw"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Download"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download Video"/>
                                 <connections>
                                     <action selector="didTapDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHG-yJ-2Co"/>
                                 </connections>

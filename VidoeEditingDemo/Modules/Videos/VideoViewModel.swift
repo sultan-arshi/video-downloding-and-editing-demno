@@ -11,10 +11,11 @@ import UIKit
 protocol VideoViewModel {
 	var isLoading: Binder<Bool> { get }
 	var reloadTableView: Binder<DriveVideo?>? { get }
+	var playVidoe: Binder<NSData?> { get }
 	
 	func numberOfRow() -> Int
 	func viewModelForRow(at indexPath: IndexPath) -> VideoItemCellViewModel
-	func downloadVidoe()
+	func downloadVideo()
 }
 
 
@@ -23,6 +24,7 @@ class VideoViewModelImp: VideoViewModel {
 	// MARK: - VideoViewModel
 	var isLoading: Binder<Bool> = Binder(false)
 	var reloadTableView: Binder<DriveVideo?>? = Binder(nil)
+	var playVidoe: Binder<NSData?> = Binder(nil)
 	
 	func numberOfRow() -> Int {
 		self.itemViewModels.count
@@ -32,7 +34,7 @@ class VideoViewModelImp: VideoViewModel {
 		return self.itemViewModels[indexPath.row]
 	}
 	
-	func downloadVidoe() {
+	func downloadVideo() {
 		if let video = self.driveVidoe {
 			self.downloadVideo(driveVideo: video)
 		}
@@ -79,7 +81,6 @@ extension VideoViewModelImp {
 			self.driveVidoe = driveVideo
 			self.bindValues()
 			self.createViewModels()
-			self.downloadVideo(driveVideo: driveVideo)
 		case .failure(let error):
 			print(error.localizedDescription)
 		}
@@ -96,10 +97,18 @@ extension VideoViewModelImp {
 	}
 	
 	private func downloadVideo(driveVideo: DriveVideo) {
-		self.videoSerives.downloadVideo(url: driveVideo.videoUrl) { data in
-			
+		self.isLoading.value = true
+		self.videoSerives.downloadVideo(url: driveVideo.videoUrl) {[weak self] data in
+			DispatchQueue.main.async {
+				guard let self = self else { return }
+				self.isLoading.value = false
+				self.playVidoe.value = data
+			}
 		} failure: { error in
-			print("Errror: ", error.localizedDescription)
+			DispatchQueue.main.async {
+				self.isLoading.value = false
+				print("Errror: ", error.localizedDescription)
+			}
 		}
 
 	}

@@ -35,6 +35,8 @@
 		A98380A52982F19F004272F1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380A42982F19F004272F1 /* UIView.swift */; };
 		A98380A72982F23A004272F1 /* DequeueInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380A62982F23A004272F1 /* DequeueInitializable.swift */; };
 		A98380A92982FCCA004272F1 /* VideoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98380A82982FCCA004272F1 /* VideoCellViewModel.swift */; };
+		A9D328BE298A73690086B5B2 /* VideoEdittor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D328BD298A73690086B5B2 /* VideoEdittor.swift */; };
+		A9D3BFE6298D04B5005B6579 /* sampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A968909B29816A4800382B72 /* sampleVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,19 @@
 			remoteInfo = VidoeEditingDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9D328E5298AC1DC0086B5B2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A91698862981707700660A36 /* VideoServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoServices.swift; sourceTree = "<group>"; };
@@ -88,6 +103,14 @@
 		A98380A42982F19F004272F1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A98380A62982F23A004272F1 /* DequeueInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueInitializable.swift; sourceTree = "<group>"; };
 		A98380A82982FCCA004272F1 /* VideoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellViewModel.swift; sourceTree = "<group>"; };
+		A9D328BD298A73690086B5B2 /* VideoEdittor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEdittor.swift; sourceTree = "<group>"; };
+		A9D328C5298AC1D90086B5B2 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		A9D328C8298AC1DA0086B5B2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		A9D328CA298AC1DA0086B5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9D328D0298AC1DA0086B5B2 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		A9D328D3298AC1DB0086B5B2 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		A9D328D6298AC1DB0086B5B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A9D328D8298AC1DB0086B5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +208,7 @@
 				A916989F2982BBD100660A36 /* Binder.swift */,
 				A98380982982D740004272F1 /* BaseViewController.swift */,
 				A98380A62982F23A004272F1 /* DequeueInitializable.swift */,
+				A9D328BD298A73690086B5B2 /* VideoEdittor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -204,6 +228,9 @@
 				A968906529813DCF00382B72 /* VidoeEditingDemo */,
 				A968907F29813DD400382B72 /* VidoeEditingDemoTests */,
 				A968908929813DD400382B72 /* VidoeEditingDemoUITests */,
+				A9D328C7298AC1D90086B5B2 /* TestingIntentExtension */,
+				A9D328D2298AC1DB0086B5B2 /* TestingIntentExtensionUI */,
+				A9D328C4298AC1D90086B5B2 /* Frameworks */,
 				A968906429813DCF00382B72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -290,6 +317,34 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A9D328C4298AC1D90086B5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9D328C5298AC1D90086B5B2 /* Intents.framework */,
+				A9D328D0298AC1DA0086B5B2 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9D328C7298AC1D90086B5B2 /* TestingIntentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A9D328C8298AC1DA0086B5B2 /* IntentHandler.swift */,
+				A9D328CA298AC1DA0086B5B2 /* Info.plist */,
+			);
+			path = TestingIntentExtension;
+			sourceTree = "<group>";
+		};
+		A9D328D2298AC1DB0086B5B2 /* TestingIntentExtensionUI */ = {
+			isa = PBXGroup;
+			children = (
+				A9D328D3298AC1DB0086B5B2 /* IntentViewController.swift */,
+				A9D328D5298AC1DB0086B5B2 /* MainInterface.storyboard */,
+				A9D328D8298AC1DB0086B5B2 /* Info.plist */,
+			);
+			path = TestingIntentExtensionUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +355,7 @@
 				A968905F29813DCF00382B72 /* Sources */,
 				A968906029813DCF00382B72 /* Frameworks */,
 				A968906129813DCF00382B72 /* Resources */,
+				A9D328E5298AC1DC0086B5B2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -394,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D3BFE6298D04B5005B6579 /* sampleVideo.mp4 in Resources */,
 				A98380A22982E0D4004272F1 /* VideoItemCell.xib in Resources */,
 				A968907629813DD400382B72 /* LaunchScreen.storyboard in Resources */,
 				A968907329813DD400382B72 /* Assets.xcassets in Resources */,
@@ -443,6 +500,7 @@
 				A916989229817ADF00660A36 /* ViedeoServiceRequest.swift in Sources */,
 				A968906729813DCF00382B72 /* AppDelegate.swift in Sources */,
 				A968906929813DCF00382B72 /* SceneDelegate.swift in Sources */,
+				A9D328BE298A73690086B5B2 /* VideoEdittor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +551,14 @@
 				A968907529813DD400382B72 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A9D328D5298AC1DB0086B5B2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D328D6298AC1DB0086B5B2 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -615,12 +681,16 @@
 		A968909129813DD400382B72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VidoeEditingDemo/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "To save downloded file";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "To save downloded file";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save downloded file";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -642,12 +712,16 @@
 		A968909229813DD400382B72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VidoeEditingDemo/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "To save downloded file";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "To save downloded file";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save downloded file";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
